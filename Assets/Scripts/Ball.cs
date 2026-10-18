@@ -2,15 +2,26 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    private Vector3 initialPosition;
+    private Quaternion initialRotation;
+    private Rigidbody rb;
+
+    private void Awake()
     {
-        
+        initialPosition = transform.position;
+        initialRotation = transform.rotation;
+        rb = GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ResetBall()
     {
-        
+        transform.position = initialPosition;
+        transform.rotation = initialRotation;
+
+        if (rb != null)
+        {
+            rb.linearVelocity = Vector3.zero;
+            rb.angularVelocity = Vector3.zero;
+        }
     }
 }

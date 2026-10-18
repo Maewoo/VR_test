@@ -14,20 +14,20 @@ public class TimerUI : MonoBehaviour
 
         if (gameManager == null)
         {
-            Debug.LogError("TimerUI: GameManager tidak ditemukan!");
+            Debug.LogError("TimerUI: GameManager not found!");
             return;
         }
 
         if (timerText == null)
         {
-            Debug.LogError("TimerUI: Timer Text belum dihubungkan!");
+            Debug.LogError("TimerUI: Timer Text not assigned in Inspector!");
             return;
         }
 
         gameManager.TimeChanged += UpdateTimer;
         UpdateTimer(gameManager.TimeRemaining);
 
-        Debug.Log("TimerUI berhasil terhubung ke GameManager.");
+        Debug.Log("TimerUI successfully connected to GameManager.");
     }
 
     private void OnDestroy()

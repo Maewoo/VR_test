@@ -13,20 +13,20 @@ public class ScoreUI : MonoBehaviour
 
         if (shotTracker == null)
         {
-            Debug.LogError("ScoreUI: ShotTracker.Instance tidak ditemukan!");
+            Debug.LogError("ScoreUI: ShotTracker.Instance not found!");
             return;
         }
 
         if (scoreText == null)
         {
-            Debug.LogError("ScoreUI: Score Text belum dihubungkan di Inspector!");
+            Debug.LogError("ScoreUI: Score Text not assigned in Inspector!");
             return;
         }
 
         shotTracker.ScoreChanged += UpdateScore;
         UpdateScore(shotTracker.Score);
 
-        Debug.Log("ScoreUI berhasil terhubung ke ShotTracker.");
+        Debug.Log("ScoreUI successfully connected to ShotTracker.");
     }
 
     private void OnDestroy()
@@ -43,6 +43,5 @@ public class ScoreUI : MonoBehaviour
             return;
 
         scoreText.text = $"Score: {score}";
-        Debug.Log($"ScoreUI menerima skor: {score}");
     }
 }

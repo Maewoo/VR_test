@@ -84,12 +84,29 @@ public class GameManager : MonoBehaviour
 
     public void StartGame()
     {
-        if (gameEnded)
-            return;
-
         timeRemaining = gameDuration;
         timerExpired = false;
         isPlaying = true;
+        gameEnded = false;
+
+        // Reset shot tracker for new game
+        if (shotTracker != null)
+        {
+            shotTracker.ResetTracker();
+        }
+
+        // Reset all targets for new game
+        foreach (Target target in targets)
+        {
+            target.ResetTarget();
+        }
+
+        // Reset all balls for new game
+        Ball[] balls = FindObjectsByType<Ball>(FindObjectsSortMode.None);
+        foreach (Ball ball in balls)
+        {
+            ball.ResetBall();
+        }
 
         TimeChanged?.Invoke(timeRemaining);
 

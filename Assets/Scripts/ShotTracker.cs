@@ -51,6 +51,17 @@ public class ShotTracker : MonoBehaviour
         shotsRemaining = maxShots;
     }
 
+    public void ResetTracker()
+    {
+        currentShotId = 0;
+        shotsRemaining = maxShots;
+        targetsLandedThisShot = 0;
+        score = 0;
+        shotActive = false;
+
+        UnityEngine.Debug.Log("ShotTracker reset for new game.");
+    }
+
     public bool BeginShot()
     {
         if (shotsRemaining <= 0)
@@ -130,7 +141,7 @@ public class ShotTracker : MonoBehaviour
 
             bool allQuiet = true;
 
-            Rigidbody[] bodies = FindObjectsOfType<Rigidbody>();
+            Rigidbody[] bodies = FindObjectsByType<Rigidbody>(FindObjectsSortMode.None);
 
             foreach (Rigidbody body in bodies)
             {

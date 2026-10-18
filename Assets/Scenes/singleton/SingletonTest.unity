@@ -4983,6 +4983,7 @@ GameObject:
   - component: {fileID: 4257412416453737074}
   - component: {fileID: 4257412416453737073}
   - component: {fileID: 4257412416453737072}
+  - component: {fileID: 4257412416453737075}
   m_Layer: 0
   m_Name: Ball New
   m_TagString: Untagged
@@ -5209,6 +5210,27 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.037
   m_Center: {x: 0, y: 0.025, z: 0}
+--- !u!114 &4257412416453737075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4257412416453737056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b2cfcef50937a54c81f0ee3642cb7fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  useButtonThrow: 0
+  buttonThrowForce: 15
+  buttonThrowSpin: 5
+  throwButton: 116
+  velocityScale: 1.5
+  angularVelocityScale: 1.2
+  mass: 0.6
+  drag: 0.12
+  angularDrag: 0.08
 --- !u!1 &4953289934541593229
 GameObject:
   m_ObjectHideFlags: 0

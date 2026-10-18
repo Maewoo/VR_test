@@ -31,6 +31,7 @@
   <Project Path="Unity.XR.CompositionLayers.UIInteraction.csproj" />
   <Project Path="Unity.XR.CompositionLayers.csproj" />
   <Project Path="Unity.XR.CompositionLayers.Editor.csproj" />
+  <Project Path="Unity.XR.MockHMD.csproj" />
   <Project Path="Unity.Burst.Editor.csproj" />
   <Project Path="Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.csproj" />
   <Project Path="Unity.Rider.Editor.csproj" />
@@ -53,6 +54,7 @@
   <Project Path="Unity.InputSystem.ForUI.csproj" />
   <Project Path="Unity.XR.Interaction.Toolkit.Analytics.Hooks.Editor.csproj" />
   <Project Path="Unity.Collections.CodeGen.csproj" />
+  <Project Path="Unity.XR.MockHMD.Editor.csproj" />
   <Project Path="Unity.XR.Management.csproj" />
   <Project Path="Unity.Mathematics.Editor.csproj" />
   <Project Path="Unity.XR.Hands.Editor.csproj" />

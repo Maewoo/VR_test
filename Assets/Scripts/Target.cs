@@ -4,6 +4,11 @@ public class Target : MonoBehaviour
 {
     private bool hasLanded;
 
+    public void ResetTarget()
+    {
+        hasLanded = false;
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
         if (!collision.gameObject.TryGetComponent<Ground>(out _))
