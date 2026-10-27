@@ -45,7 +45,7 @@ public class RestartUI : MonoBehaviour
     {
         restartPanel.SetActive(false);
         SceneManager.LoadScene("GameScene");
-        //gameManager.StartGame();
+        gameManager.StartGame();
     }
 
     private void OnDestroy()
