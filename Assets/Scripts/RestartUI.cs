@@ -1,6 +1,7 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class RestartUI : MonoBehaviour
 {
@@ -43,7 +44,8 @@ public class RestartUI : MonoBehaviour
     public void OnRestartClicked()
     {
         restartPanel.SetActive(false);
-        gameManager.StartGame();
+        SceneManager.LoadScene("GameScene");
+        //gameManager.StartGame();
     }
 
     private void OnDestroy()

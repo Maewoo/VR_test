@@ -34,5 +34,6 @@ public class Target : MonoBehaviour
         Debug.Log(
             $"{gameObject.name} landed during shot #{landedShotId}."
         );
+        Destroy(gameObject);
     }
 }

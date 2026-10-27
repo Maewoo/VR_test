@@ -62,15 +62,13 @@ public class BallShotReporter : MonoBehaviour
 
     private void OnShotEnded(int shotId)
     {
-        ball.ResetBall();
         grabInteractable.enabled = true;
         Debug.Log($"{gameObject.name} ready for next throw.");
     }
 
     private void OnGameEnded(bool won)
     {
-        ball.ResetBall();
         grabInteractable.enabled = true;
-        Debug.Log($"{gameObject.name} reset for game over.");
+        Debug.Log($"{gameObject.name} game ended.");
     }
 }
